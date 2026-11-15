@@ -1,0 +1,28 @@
+{
+  "name": "enigmic-competition-tools",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "turbo": "^2.11.10",
+    "typescript": "^7.0.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "next>postcss": "^8.5.23",
+      "@enigmic-co/ui": "file:vendor/enigmic-co-ui-0.4.2.tgz"
+    }
+  }
+}
